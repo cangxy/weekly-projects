@@ -1,0 +1,26 @@
+.cal-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.cal-box {
+    border: 2px solid rgba(255,255,255,0.8);
+    font-size: 96px;
+    color: #ffffff;
+    line-height: 200px;
+    text-align: center;
+    background-color: #444444;
+}
+
+.cal-box:first-child {
+    grid-column: 1/5;
+    line-height: 200px;
+    text-align: center;
+}
+
+.cal-box:nth-child(2) {
+    grid-row: 2/5;
+    line-height: 610px;
+}

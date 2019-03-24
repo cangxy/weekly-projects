@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div>
+    <kbd>a</kbd>
+</div>
+<div>
+    <kbd>s</kbd>
+</div>
+<div>
+    <kbd>d</kbd>
+</div>
+<div>
+    <kbd>f</kbd>
+</div>
+<div>
+    <kbd>g</kbd>
+</div>
+<div>
+    <kbd>g</kbd>
+</div>
+<div>
+    <kbd>h</kbd>
+</div>
+<div>
+    <kbd>j</kbd>
+</div>
+<div>
+    <kbd> k</kbd>
+</div>
+<div>
+    <kbd> k</kbd>
+</div>
+<div>
+    <kbd>l</kbd>
+</div>
+<audio src="../SOUNDS/boom.wav" data-key="A"></audio>
+<audio src="../SOUNDS/clap.wav" data-key="S"></audio>
+<audio src="../SOUNDS/hihat.wav" data-key="D"></audio>
+<audio src="../SOUNDS/kick.wav" data-key="F"></audio>
+<audio src="../SOUNDS/openhat.wav" data-key="G"></audio>
+<audio src="../SOUNDS/ride.wav" data-key="H"></audio>
+<audio src="../SOUNDS/snare.wav" data-key="J"></audio>
+<audio src="../SOUNDS/tink.wav" data-key="K"></audio>
+<audio src="../SOUNDS/tom.wav" data-key="L"></audio>
+</body>
+<script>
+    window.addEventListener("keypress",function(event){
+        console.log(event.code)
+        let key=event.code.charAt(event.code.length-1)
+
+        let audio=document.querySelector(`audio[data-key="${key}"]`)
+        if(!audio){
+            return
+        }
+      audio.play()
+    audio.currentTime=0
+    })
+
+</script>
+
+</html>
